@@ -124,11 +124,76 @@ The script [05_Customer_RFM_Report.sql](file:///E:/projects%202026/Data%20Analys
 This allows classification of customers into groups like *Champions*, *Loyal Customers*, *At Risk*, and *Lost*.
 
 ### 📈 Sales Performance & Seasonality
-The script [06_Time_Analysis.sql](file:///E:/projects%202026/Data%20Analysis%20Projects/project_1/Analysis/06_Time_Analysis.sql) executes time-series queries measuring monthly revenue growth, year-over-year variations, and rolling moving averages to pinpoint trends.
+The script [06_Time_Analysis.sql] executes time-series queries measuring monthly revenue growth, year-over-year variations, and rolling moving averages to pinpoint trends.
+
+---
+
+## 📊 Power BI Dashboard & Visualizations
+
+An interactive **Power BI Dashboard** [Sales Dashboard.pbix] directory to visualize the gold schema dataset. The dashboard is structured into three primary reporting pages:
+
+### 1. Overview Dashboard
+Provides a high-level summary of the company's financial performance and macro-trends across geographic regions.
+
+![Overview Dashboard](DashBoard/overview.png)
+
+*   **Key Performance Indicators (KPIs):**
+    *   **Revenue:** $29M
+    *   **Profit:** $12M
+    *   **Profit Margin %:** 39.81%
+    *   **YoY Growth %:** 1.12%
+    *   **Sales YTD:** 46K
+    *   **Revenue PY (Previous Year):** $14M
+*   **Visualizations:**
+    *   **Revenue and Profit by Year (Line Chart):** Tracks the trajectory of financial performance over time (2010–2014), highlighting a clear peak in 2013.
+    *   **Revenue by Country (Bar Chart):** Breaks down income by country, showing the United States and Australia as the leading markets, followed by the UK, Germany, France, and Canada.
+    *   **Revenue by Maintenance (Pie Chart):** Segregates operational revenue from maintenance-related contracts, showing that non-maintenance transactions account for 98.22% ($29M) of the total.
+
+---
+
+### 2. Sales Dashboard
+Delivers a deep dive into product performance, categories, and inventory movement.
+
+![Sales Dashboard](DashBoard/Sales.png)
+
+*   **Key Performance Indicators (KPIs):**
+    *   **Total Orders:** 28K
+    *   **Revenue:** $29M
+    *   **Quantity Sold:** 60K
+    *   **Average Order Value:** $1.06K
+*   **Visualizations:**
+    *   **Revenue by Category (Bar Chart):** Segments business lines into Accessories, Bikes, and Clothing. **Bikes** heavily dominate the revenue generation.
+    *   **Revenue by Product Line (Donut Chart):** Shows the distribution within product lines—Road (49.81%), Mountain (34.92%), Touring (13.21%), and Other Sales.
+    *   **Top 10 Products (Data Table with Progress Bars):** Highlights the top 10 highest-grossing products, predominantly featuring the *Mountain-200* and *Road-150* series, detailed with individual Revenue, Profit, and YoY Growth rates.
+
+---
+
+### 3. Customers Dashboard
+Focuses on user demographics and behavioral insights to understand who the target buyers are.
+
+![Customers Dashboard](DashBoard/Customers.png)
+
+*   **Key Performance Indicators (KPIs):**
+    *   **Total Customers:** 18.484K
+    *   **Revenue per Customer:** $1.59K
+    *   **Orders per Customer:** 1.50
+*   **Visualizations:**
+    *   **Revenue by Marital Status (Donut Chart):** Compares buying power based on social demographics, showing a nearly balanced split between Single customers (51.73%) and Married customers (48.27%).
+    *   **Revenue by Gender (Pie Chart):** Segments revenue by biological gender, showing an almost equal contribution from Female (50.48%) and Male (49.52%) segments.
+    *   **Top 10 Customers (Data Table with Progress Bars):** Features a leaderboard of individual high-value VIP clients ranked by their total Revenue and Profit contributions (e.g., Jordan Turner, Willie Xu, etc.).
+
+---
+
+### 🎛️ Global Slicers & Interactivity
+Every dashboard page includes a uniform, left-hand navigation and filtering pane containing:
+*   **Country Filter Dropdown:** Allows dynamic cross-filtering for specific regional isolation.
+*   **Year Checkboxes (2010–2014):** Enables multi-select or single-select historical drilling for time-series analysis.
 
 ---
 
 ## 🛠️ Built With
 *   **T-SQL (Transact-SQL):** Scripting language used for DDL, SP, and analytics views.
 *   **Microsoft SQL Server Engine:** Central Relational Database Management System.
+*   **Power BI Desktop:** Business intelligence dashboard and data visualization.
 *   **Mermaid.js:** Visualization architecture workflow.
+
